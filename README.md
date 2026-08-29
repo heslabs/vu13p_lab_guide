@@ -51,6 +51,7 @@ Set the device permissions and identify the port, then launch PuTTY configured f
 sudo chmod 666 /dev/ttyUSB*;
 ls /dev/ttyUSB*
 putty -serial -sercfg 115200,8,n,1,N /dev/ttyUSB0 -fn "client:Ubuntu Mono 16" &
+```
 
 In PuTTY:
 ```
@@ -61,6 +62,7 @@ Speed = 115200.
 
 #### 3 Power on the card and watch it boot
 Power on the SMF daughter card. You'll see the boot sequence in the terminal:
+
 * Xilinx ZynqMP First Stage Boot Loader, then
 * U-Boot 2022.01 (CPU/DRAM/PMUFW info), then
 * PynqLinux (Ubuntu 22.04) finishing at a login prompt.
