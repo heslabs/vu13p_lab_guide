@@ -24,10 +24,10 @@ Go to File -> Open and load your *.bmprj configuration file.
 #### 4 Set the LAN connection type
 Navigate to System -> Lan Select System -> USB Ethernet to configure the board to communicate over the USB Ethernet interface. Scan the network and connect to the HAPS.
 
-<img width="433" height="86" alt="image" src="https://github.com/user-attachments/assets/30b3702b-5dbb-4ca4-9872-d07bed216d0a" />
+<img width="409" height="148" alt="image" src="https://github.com/user-attachments/assets/543be51c-af48-473c-8999-4fba0e2416cc" />
 <br>
+<img width="743" height="191" alt="image" src="https://github.com/user-attachments/assets/169b1c35-d4d9-4bd6-8362-eedc3053eea1" />
 
-<img width="539" height="256" alt="image" src="https://github.com/user-attachments/assets/1f533d15-424e-434a-8f0f-1ea8fa0cfd2c" />
 
 
 #### 5 Set the host's fixed IP address
@@ -38,13 +38,24 @@ Netmask: 255.255.255.0
 ```
 This gives your host machine a static IP on the same subnet as the board.
 
+<img width="433" height="86" alt="image" src="https://github.com/user-attachments/assets/30b3702b-5dbb-4ca4-9872-d07bed216d0a" />
+<br>
+<img width="539" height="256" alt="image" src="https://github.com/user-attachments/assets/1f533d15-424e-434a-8f0f-1ea8fa0cfd2c" />
+<br>
+<img width="373" height="257" alt="image" src="https://github.com/user-attachments/assets/78d2c354-33d6-4e23-9ab0-ecfaad22cc7a" />
 
 #### 6 Power on the HAPS
 Once the connection is established, power on the HAPS unit.
 
+<img width="382" height="277" alt="image" src="https://github.com/user-attachments/assets/7631c4ad-3523-4991-9fa6-d7a34627814e" />
+
 
 #### 7 Configure the System and FPGA
 Configure the system via virtual JTAG — this takes a few seconds to complete. Then confirm the bit file to be used for FPGA configuration.
+
+<img width="651" height="244" alt="image" src="https://github.com/user-attachments/assets/2df650ec-0bfe-4155-b1de-39a52729542b" />
+<br>
+<img width="586" height="199" alt="image" src="https://github.com/user-attachments/assets/d6ecbe8d-df8d-4059-b2be-33985afd8bec" />
 
 
 ---
