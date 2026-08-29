@@ -68,6 +68,13 @@ Power on the SMF daughter card. You'll see the boot sequence in the terminal:
 * PynqLinux (Ubuntu 22.04) finishing at a login prompt.
 * Default login is xilinx / xilinx.
 
+<br>
+<img width="580" height="431" alt="image" src="https://github.com/user-attachments/assets/fd4397d1-6871-4207-9a0e-a4f7d7ccf9ea" />
+
+<br>
+<img width="640" height="389" alt="image" src="https://github.com/user-attachments/assets/00ea3e49-4866-4b63-a992-2d130ebdb6d9" />
+
+
 #### 4 Find the card's IP address
 Once logged in at the serial console (or from another machine on the same network as the card), run: ifconfig Note the management IP address assigned to the board.
 
@@ -85,6 +92,12 @@ Once connected via SSH, activate the PYNQ virtual environment and run the detect
 source /usr/local/share/pynq-venv/bin/activate
 python ../src/yolov8n_pred.py
 ```
+
+
+<br>
+<img width="578" height="346" alt="image" src="https://github.com/user-attachments/assets/5296e16e-0606-4efd-8179-24fdfa135b75" />
+
+
 
 #### Python sample code
 ```
