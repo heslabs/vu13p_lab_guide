@@ -72,8 +72,47 @@ Power on the SMF daughter card. You'll see the boot sequence in the terminal:
 Once logged in at the serial console (or from another machine on the same network as the card), run: ifconfig Note the management IP address assigned to the board.
 
 #### 5 SSH into the SMF daughter card
-From your terminal: ssh xilinx@<management-ip-address> Password: xilinx Accept the host key fingerprint if prompted.
+From your terminal: 
+```
+ssh xilinx@<management-ip-address>
+Password: xilinx
+```
+Accept the host key fingerprint if prompted.
 
 #### 6 Run YOLO object detection
-Once connected via SSH, activate the PYNQ virtual environment and run the detection script: source /usr/local/share/pynq-venv/bin/activate python ../src/yolov8n_pred.py
+Once connected via SSH, activate the PYNQ virtual environment and run the detection script: 
+```
+source /usr/local/share/pynq-venv/bin/activate
+python ../src/yolov8n_pred.py
+```
+
+#### Python sample code
+```
+# yolov8n_pred.py
+
+import argparse
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+from ultralytics import YOLO
+
+ap = argparse.ArgumentParser()
+ap.add_argument("-i", "--image", required=True)
+args = vars(ap.parse_args())
+image = cv2.imread(args["image"])
+
+# Load a model
+model = YOLO('yolov8n.pt')  # load an official model
+# Predict with the model
+results = model(image)  # predict on an image
+
+# Process results list
+for result in results:
+    boxes = result.boxes  # Boxes object for bounding box outputs
+    masks = result.masks  # Masks object for segmentation masks outputs
+    keypoints = result.keypoints  # Keypoints object for pose outputs
+    probs = result.probs  # Probs object for classification outputs
+    result.save(filename='result.jpg')  # save to disk
+```
 
