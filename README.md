@@ -1,5 +1,6 @@
 # EPS-VU13P Quick Start Guide
 
+<img width="421" height="240" alt="image" src="https://github.com/user-attachments/assets/25c95ad9-8d3f-4d80-b099-81b8fc0a735e" />
 
 ---
 ## Setup and Configure the ESP-VU13P
@@ -13,6 +14,8 @@ chmod 777 E-CoreFlow GDK_BACKEND=x11 ./E-CoreFlow >/dev/null 2>&1 &
 #### 2 Select the board
 In the E-CoreFlow UI, choose Select Board -> VU13P (or VU19P, depending on your hardware).
 
+<img width="366" height="124" alt="image" src="https://github.com/user-attachments/assets/a2954038-4c9e-4956-9018-e10ae0918679" />
+
 
 #### 3 Open your configuration project file
 Go to File -> Open and load your *.bmprj configuration file.
@@ -20,6 +23,11 @@ Go to File -> Open and load your *.bmprj configuration file.
 
 #### 4 Set the LAN connection type
 Navigate to System -> Lan Select System -> USB Ethernet to configure the board to communicate over the USB Ethernet interface. Scan the network and connect to the HAPS.
+
+<img width="433" height="86" alt="image" src="https://github.com/user-attachments/assets/30b3702b-5dbb-4ca4-9872-d07bed216d0a" />
+<br>
+
+<img width="539" height="256" alt="image" src="https://github.com/user-attachments/assets/1f533d15-424e-434a-8f0f-1ea8fa0cfd2c" />
 
 
 #### 5 Set the host's fixed IP address
