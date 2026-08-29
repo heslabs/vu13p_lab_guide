@@ -1,5 +1,9 @@
 # EPS-VU13P Quick Start Guide
 
+
+---
+## Setup and Configure the ESP-VU13P
+
 #### 1 Launch E-CoreFlow
 Make the binary executable, then launch it with the X11 backend forced (helps avoid display issues on some systems): 
 ```
@@ -36,6 +40,8 @@ Configure the system via virtual JTAG — this takes a few seconds to complete. 
 
 
 ---
+## Connect the SMF (CPU) module
+
 #### 1 Connect the SMF daughter card via USB-UART bridge
 Use a USB Type-A to Micro-USB cable: plug the Type-A end into a free USB port on your host PC, and the Micro-USB end into the SMF daughter card's UART port. Let the PC auto-detect the device and install drivers if needed.
 
