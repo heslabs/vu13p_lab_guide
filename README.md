@@ -33,3 +33,39 @@ Once the connection is established, power on the HAPS unit.
 
 #### 7 Configure the System and FPGA
 Configure the system via virtual JTAG — this takes a few seconds to complete. Then confirm the bit file to be used for FPGA configuration.
+
+
+---
+#### 1 Connect the SMF daughter card via USB-UART bridge
+Use a USB Type-A to Micro-USB cable: plug the Type-A end into a free USB port on your host PC, and the Micro-USB end into the SMF daughter card's UART port. Let the PC auto-detect the device and install drivers if needed.
+
+#### 2 Open a serial terminal (PuTTY)
+Set the device permissions and identify the port, then launch PuTTY configured for serial communication at 115200 baud: 
+```
+sudo chmod 666 /dev/ttyUSB*;
+ls /dev/ttyUSB*
+putty -serial -sercfg 115200,8,n,1,N /dev/ttyUSB0 -fn "client:Ubuntu Mono 16" &
+
+In PuTTY:
+```
+Connection Type = Serial,
+Serial Line = /dev/ttyUSB0 (or your port),
+Speed = 115200.
+```
+
+#### 3 Power on the card and watch it boot
+Power on the SMF daughter card. You'll see the boot sequence in the terminal:
+* Xilinx ZynqMP First Stage Boot Loader, then
+* U-Boot 2022.01 (CPU/DRAM/PMUFW info), then
+* PynqLinux (Ubuntu 22.04) finishing at a login prompt.
+* Default login is xilinx / xilinx.
+
+#### 4 Find the card's IP address
+Once logged in at the serial console (or from another machine on the same network as the card), run: ifconfig Note the management IP address assigned to the board.
+
+#### 5 SSH into the SMF daughter card
+From your terminal: ssh xilinx@<management-ip-address> Password: xilinx Accept the host key fingerprint if prompted.
+
+#### 6 Run YOLO object detection
+Once connected via SSH, activate the PYNQ virtual environment and run the detection script: source /usr/local/share/pynq-venv/bin/activate python ../src/yolov8n_pred.py
+
