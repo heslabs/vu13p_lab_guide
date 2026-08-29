@@ -1,4 +1,4 @@
-# EPS-VU13P LAb Quick Start Guide
+# EPS-VU13P Quick Start Guide
 
 #### 1 Launch E-CoreFlow
 Make the binary executable, then launch it with the X11 backend forced (helps avoid display issues on some systems): 
